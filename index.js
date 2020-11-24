@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-const App = () => {
-    const [data, setData] = useState(0)
+const Component = () => {
+    const [data, setData] = useState(0);
     return (
         <div>
             <div>single-page-two</div>
@@ -13,5 +14,16 @@ const App = () => {
         </div>
     );
 };
+
+const App = () => {
+    return (
+        <Router>
+            <Route path='/'>
+                <Component />
+            </Route>
+        </Router>
+    );
+};
+
 const dom = document.querySelector('#app');
 ReactDOM.render(<App/>, dom);

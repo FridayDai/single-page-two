@@ -36,7 +36,7 @@ module.exports = {
     },
     output: {
         path: DIST,
-        publicPath: isProductiongEnv ? '/' : '/',
+        publicPath: isProductiongEnv ? '/single-page-two' : '/',
         chunkFilename: 'bundle-[name]-[chunkhash:8].js',
         filename: 'bundle_[name]_[hash:8].js' // 结束最终JS文件
     },
